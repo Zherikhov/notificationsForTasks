@@ -7,11 +7,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.zherikhov.vladislav</groupId>
     <artifactId>notificationsForTasks</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <organization>
-        <name>Example Company</name>
-        <url>http://www.example.com/</url>
+        <name>Zherikhov Company</name>
+        <url>http://www.zherikhov.com/</url>
     </organization>
 
     <name>notificationsForTasks</name>
@@ -26,7 +26,7 @@
             <scope>provided</scope>
         </dependency>
         <!-- Add dependency on jira-core if you want access to JIRA implementation classes as well as the sanctioned API. -->
-        <!-- This is not normally recommended, but may be required eg when migrating a plugin originally developed against JIRA 4.x -->
+        <!-- This is not normally recommended, but may be required e.g. when migrating a plugin originally developed against JIRA 4.x -->
         <!--
         <dependency>
             <groupId>com.atlassian.jira</groupId>
@@ -159,8 +159,8 @@
         <!-- TestKit version 6.x for JIRA 6.x -->
         <testkit.version>6.3.11</testkit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
 </project>

@@ -3,22 +3,47 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/pluginIcon.png</param>
-        <param name="plugin-logo">images/pluginLogo.png</param>
+        <param name="plugin-icon">images/logo.png</param>
+        <param name="plugin-logo">images/logo.png</param>
     </plugin-info>
 
     <!-- add our i18n resource -->
-    <resource type="i18n" name="i18n" location="notificationsForTasks"/>
-    
+    <resource type="i18n" name="i18n" location="/i18n/notificationsForTasks"/>
+
     <!-- add our web resources -->
     <web-resource key="notificationsForTasks-resources" name="notificationsForTasks Web Resources">
         <dependency>com.atlassian.auiplugin:ajs</dependency>
-        
+
         <resource type="download" name="notificationsForTasks.css" location="/css/notificationsForTasks.css"/>
         <resource type="download" name="notificationsForTasks.js" location="/js/notificationsForTasks.js"/>
         <resource type="download" name="images/" location="/images"/>
 
         <context>notificationsForTasks</context>
     </web-resource>
-    
+
+    <web-section name="Notifications for Tasks" i18n-name-key="nft-section.name" key="nft-section"
+                 location="admin_plugins_menu"
+                 weight="1000">
+        <description key="nft-section.description">The My Section Plugin</description>
+        <label key="nft-section.label"/>
+    </web-section>
+
+    <web-item name="Global settings" i18n-name-key="nft-web-item.name" key="nft-web-item"
+              section="admin_plugins_menu/nft-section" weight="1000">
+        <description key="nft-web-item.description">The My Web Item Plugin</description>
+        <label key="nft-web-item.label"/>
+        <link linkId="nft-web-item-link">/secure/admin/NFTWebWorkAction.jspa</link>
+    </web-item>
+
+    <webwork1 name="NFT Webwork" i18n-name-key="nft-webwork.name" key="nft-webwork" roles-required="admin">
+        <description key="nft-webwork.description">The My Webwork Plugin</description>
+        <actions>
+            <action name="ru.zherikhov.vladislav.webwork.NFTWebWorkAction" alias="NFTWebWorkAction">
+                <view name="success">/templates/nft-webwork/success.vm</view>
+                <view name="input">/templates/nft-webwork/input.vm</view>
+                <view name="error">/templates/nft-webwork/error.vm</view>
+            </action>
+        </actions>
+    </webwork1>
+
 </atlassian-plugin>
