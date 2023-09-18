@@ -10,7 +10,7 @@ public class NFTWebWorkAction extends JiraWebActionSupport {
 
     @Override
     public String doExecute() throws Exception {
-
+        //<img src="../../../download/resources/ru.zherikhov.vladislav.notificationsForTasks:nft-web-panel/nft-web" alt="Icon">
         return SUCCESS;
     }
 }

@@ -1,1 +1,31 @@
-<h1>success.vm</h1>
+<html>
+<head>
+    <title>$i18n.getText("title.name")</title>
+    <meta name="decorator" content="atl.admin">
+</head>
+<body>
+
+<form method="POST" class="aui">
+    <div class="field-group">
+        <label for="comment-email">$i18n.getText("ru.zherikhov.vladislav.field.email")
+            <span class="aui-icon icon-required">(required)</span></label>
+        <input class="text medium-field" type="text"
+               id="comment-email" name="comment-email" placeholder="you@example.com">
+        <div class="description">Your
+            primary email address.
+        </div>
+    </div>
+    <div class="field-group">
+        <label for="comment-input">$i18n.getText("ru.zherikhov.vladislav.field.comment")</label>
+        <textarea class="textarea" name="comment-input"
+                  id="comment-input" placeholder="Your comment here..."></textarea>
+    </div>
+    <div class="buttons-container">
+        <div class="buttons">
+            <input class="button submit" type="submit" value=$i18n.getText("ru.zherikhov.vladislav.button.save") id="comment-save-button">
+        </div>
+    </div>
+</form>
+</body>
+</html>
+ 

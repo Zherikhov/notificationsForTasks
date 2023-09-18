@@ -3,8 +3,8 @@
         <description>${project.description}</description>
         <version>${project.version}</version>
         <vendor name="${project.organization.name}" url="${project.organization.url}" />
-        <param name="plugin-icon">images/logo.png</param>
-        <param name="plugin-logo">images/logo.png</param>
+        <param name="plugin-icon">images/icon.png</param>
+        <param name="plugin-logo">images/icon.png</param>
     </plugin-info>
 
     <!-- add our i18n resource -->
@@ -45,5 +45,11 @@
             </action>
         </actions>
     </webwork1>
+
+    <web-panel key="nft-web-panel" location="com.atlassian.jira.plugin.headernav.right.context" weight="50">
+        <resource name="nft-web" type="download" location="/images/icon.png"/>
+        <resource name="notificationsForTasks.css" type="download"  location="/css/notificationsForTasks.css"/>
+        <resource name="view" type="velocity" location="/templates/nftIcon/view.vm"/>
+    </web-panel>
 
 </atlassian-plugin>
