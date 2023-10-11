@@ -1,19 +1,18 @@
 <html>
 <head>
-    <title>$i18n.getText("title.name")</title>
+    <title>$i18n.getText("ru.zherikhov.vladislav.title")</title>
     <meta name="decorator" content="atl.admin">
+    <meta name="admin.active.section" content="admin_plugins_menu/nft-section/nft-web-item"/>
 </head>
 <body>
 
-<form method="POST" class="aui">
+<form class="aui" method="POST" action="NFTWebWorkAction!save.jspa">
     <div class="field-group">
         <label for="comment-email">$i18n.getText("ru.zherikhov.vladislav.field.email")
             <span class="aui-icon icon-required">(required)</span></label>
         <input class="text medium-field" type="text"
-               id="comment-email" name="comment-email" placeholder="you@example.com">
-        <div class="description">Your
-            primary email address.
-        </div>
+               id="comment-email" name="comment-email" placeholder="you@example.com" value="$!{email}">
+        <div class="description">Your primary email address</div>
     </div>
     <div class="field-group">
         <label for="comment-input">$i18n.getText("ru.zherikhov.vladislav.field.comment")</label>
@@ -22,7 +21,10 @@
     </div>
     <div class="buttons-container">
         <div class="buttons">
-            <input class="button submit" type="submit" value=$i18n.getText("ru.zherikhov.vladislav.button.save") id="comment-save-button">
+            <input class="button submit" type="submit"
+                   id="comment-save-button" value=$i18n.getText("ru.zherikhov.vladislav.button.save")>
+            <input class="button submit" type="submit"
+                   id="comment-clear-button" value=Clear formaction="NFTWebWorkAction!clear.jspa">
         </div>
     </div>
 </form>
